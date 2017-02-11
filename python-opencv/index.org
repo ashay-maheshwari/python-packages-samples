@@ -1,0 +1,37 @@
+#+Title: Mouse click events using python programming
+#+Date: January 15, 2017
+#+Author: Ashay Maheshwari
+#+SETUPFILE: ./org-templates/level-1.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* Introduction 
+  This document will have code for performing mouse click event
+  programming using python.
+
+
+* Install opencv 
+  #+BEGIN_SRC command
+  yum install numpy opencv* -y
+  #+END_SRC
+
+
+* Example code 
+  In this example we’ll click and drag a rectangular Region of
+  Interest (ROI) and crop it from our image. This technique is
+  especially helpful if you are labeling data as input to an image
+  classification algorithm.
+
+  See [[./click-and-crop.py]]
+  Execute as shown below -
+  #+BEGIN_SRC command
+  python click-and-crop.py --image test-image.jpg
+  #+END_SRC
+  Select the area to crop and press c to crop 
+
+* References 
+  + [[http://docs.opencv.org/trunk/dd/dd5/tutorial_py_setup_in_fedora.html][Install Open CV]]
+  + [[http://www.pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/][pyimagesearch]]
+
+

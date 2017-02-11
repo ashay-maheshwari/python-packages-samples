@@ -1,0 +1,65 @@
+#+Title: Pandas for Python Data Science 
+#+Author: Ashay Maheshwari
+
+
+* What is Pandas ?
+  + OpenSource python library for data analysis.
+ 
+
+* Pandas Data Structure 
+** Series 
+   + Series is a one-dimensional object similar to an array, list, or
+     column in a table.
+   + An index is labelled to each value in Series.
+   + Each item will receive an index label from 0 to N, where N is the
+     length of the Series minus one.
+   + Example as given below - 
+     #+BEGIN_SRC command
+     s = pd.Series([9,'Ashay',4.56, -8734,'String again'])
+     #+END_SRC   
+   + Sample code 
+     #+BEGIN_SRC python
+     import pandas as pd
+     s = pd.Series([8,'Ashay', 54.678, -908, 'String again'])
+     print s
+     #+END_SRC
+   + Sample output 
+     #+BEGIN_SRC command
+     0               8
+     1           Ashay
+     2          54.678
+     3            -908
+     4    String again
+     #+END_SRC
+** DataFrame 
+   + A DataFrame is a tabular data structure contains rows and columns
+     like a database table or spread sheet.
+   + A group of Series objects can also be considered as a dataframes. 
+   + To create DataFrame , pass a dictionary of lists to the DataFrame
+     constructor.
+   + See the examples given below - 
+     #+BEGIN_SRC command
+     world_cup_winners = {'year':[2015, 2011, 2007, 2003, 1999, 1996, 1992], 
+                          'team':['Australia', 'India', 'Australia','Australia', 'Australia', 'Sri Lanka', 'Pakistan']
+                         }
+     worldcup_winners = pd.DataFrame(data, columns=['year','Winning Team'])
+     #+END_SRC
+   + Sample output
+     #+BEGIN_SRC command
+        year       team
+     0  2015  Australia
+     1  2011      India
+     2  2007  Australia
+     3  2003  Australia
+     4  1999  Australia
+     5  1996  Sri Lanka
+     6  1992   Pakistan
+
+     #+END_SRC
+
+
+* References
+  + http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/
+  + https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python#gs.hnSDTE4
+  + [[http://www.dataschool.io/best-python-pandas-resources/][8 Resources to learn python data science]]
+  + [[http://pandas.pydata.org/pandas-docs/stable/][Pandas Documetation]]
