@@ -5,11 +5,15 @@
 
 import tarfile
 
-
 file_list = ['Readme.txt', 'example.tar', 'bad_exmaple.tar']
 
 for filename in file_list:
 	try:
 		print filename, " ", tarfile.is_tarfile(filename)
+		#is_tarfile() returns True if a file is a tarfile 
 	except Exception, err:
 		print filename, " ", err
+
+
+
+
